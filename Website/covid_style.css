@@ -1,0 +1,22 @@
+p {
+	color: #24292b;
+	font-size: 14px;
+}
+body {
+	background-color: #e4eaed;
+	font-size: 14px;
+	/* font-style: italics; */
+	font-family: "Futura";
+}
+h1 {
+	color: #24292b;
+  font-size: 35px;
+}
+h2 {
+	color: #24292b;
+  font-size: 25px;
+}
+h3 {
+	color: #24292b;
+  font-size: 15px;
+}
