@@ -1,3 +1,5 @@
+<!-- Webpage to display health workers by selected vaccine site. -->
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,6 +13,12 @@ include 'connect_covid_db.php';
 ?>
 <h1>Site Workers</h1>
 <hr>
+
+<!-- Back to homepage button -->
+<form action="covid.php" method="post">
+
+  <input type="submit" value="Back to homepage">
+</form>
 
 <!-- List doctors -->
 <table>
