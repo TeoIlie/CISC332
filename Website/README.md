@@ -12,3 +12,8 @@ A fully functioning web-based interface for the covid vaccination database, usin
 - Allow the user to choose a vaccine type and display all the vaccination sites that have (or will) offer that type of vaccine along with the total number of doses that have shipped to that site.
 - Allow the user to choose a patient (from the list of patients in the database) and show their vaccination status -- ie. the patient's name, ohip number, the date the vaccine was given and the type of vaccine that was given.
 - Show a listing of all workers that work at a vaccination site (chosen by the user) .  Show their name and whether they are a doctor or a nurse.
+
+## Sites Explanation
+-`covid.php` is the homepage where you can access subpages through buttons and text input
+  - `sites_page` displays site vaccine availability
+  - `workers_page` displays doctors, nurses at different sites
