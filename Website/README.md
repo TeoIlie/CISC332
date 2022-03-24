@@ -14,6 +14,6 @@ A fully functioning web-based interface for the covid vaccination database, usin
 - Show a listing of all workers that work at a vaccination site (chosen by the user) .  Show their name and whether they are a doctor or a nurse.
 
 ## Sites Explanation
--`covid.php` is the homepage where you can access subpages through buttons and text input
+- `covid.php` is the homepage where you can access subpages through buttons and text input
   - `sites_page` displays site vaccine availability
   - `workers_page` displays doctors, nurses at different sites
