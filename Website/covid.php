@@ -18,8 +18,7 @@
 
   <!-- Find workers by vaccine site -->
   <h2>Search workers by vaccine site</h2>
-
-  <form action="get_workers.php" method="post">
+  <form action="workers_page.php" method="post">
 
     <?php
     include 'get_site_data.php';
@@ -27,7 +26,18 @@
 
     <input type="submit" value="List health workers">
   </form>
+  <hr>
 
+  <!-- Find vaccine sites by vaccine type -->
+  <h2>Search vaccine sites by vaccine type</h2>
+  <form action="sites_page.php" method="post">
+
+    <?php
+    include 'get_vaccine_data.php';
+    ?>
+
+    <input type="submit" value="List vaccine sites">
+  </form>
   <hr>
 
   <?php
