@@ -17,3 +17,4 @@ A fully functioning web-based interface for the covid vaccination database, usin
 - `covid.php` is the homepage where you can access subpages through buttons and text input
   - `sites_page` displays site vaccine availability
   - `workers_page` displays doctors, nurses at different sites
+  - `status_page` displays the vaccine records of a selected patient
