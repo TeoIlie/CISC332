@@ -6,6 +6,10 @@
   <meta charset="utf-8">
   <title>Vaccine availability</title>
   <link rel="stylesheet" href="covid_style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Roboto:wght@100&display=swap" rel="stylesheet">
 </head>
 <body>
 <?php
@@ -25,9 +29,9 @@ include 'connect_covid_db.php';
 <?php
    $which_type= $_POST["vaccine_type"];
    echo "<h2>Selected vaccine type: " . $which_type . "</h2>";
-   echo "<p>Note: Sorted in descending order by number of doses available.</p>";
+   echo "<tr><th> Site name </th><th> Available doses </th></tr>";
 
-   $query = 'SELECT Site_name AS "Site name", SUM(Number_doses) AS "Available doses" FROM Vaccine_lot WHERE Producer_name = "' . $which_type . '" GROUP BY Site_name ORDER BY Number_doses';
+   $query = 'SELECT Site_name AS "Site name", SUM(Number_doses) AS "Available doses" FROM Vaccine_lot WHERE Producer_name = "' . $which_type . '" GROUP BY Site_name ORDER BY Number_doses DESC';
    $result=$connection->query($query);
     while ($row=$result->fetch()) {
 	     echo "<tr><td>" .$row["Site name"]."</td><td>".$row["Available doses"]."</td></tr>";
@@ -35,6 +39,8 @@ include 'connect_covid_db.php';
 
 ?>
 </table>
+<br>
+<body>Note: Sorted in decreasing order by number of doses available.</body>
 <?php
    $connection = NULL;
 ?>
