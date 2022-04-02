@@ -9,6 +9,12 @@ body {
 	color: #23272a;
 	font-family: 'Roboto', sans-serif;
 }
+.homepage {
+	background-image: url('https://freepikpsd.com/file/2019/10/water-waves-clipart-5-Free-PNG-Images-Transparent.gif');
+	background-size: 400px;
+	background-repeat: no-repeat;
+	background-position: right bottom;
+}
 h1 {
 	background-color: #7289da;
 	color: #ffffff;
@@ -43,12 +49,21 @@ h4 {
   font-size: 15px;
 	font-family: 'Roboto', sans-serif;
 }
-input {
+input[type=submit]{
   background-color: #99aab5;
   color: white;
 	font-size: 18px;
 	font-family: 'Roboto', sans-serif;
 	border-radius: 10px;
+}
+input[type=text]{
+	background-color: #99aab5;
+	color: white;
+	font-size: 18px;
+	font-family: 'Roboto', sans-serif;
+	border-radius: 4px;
+	border-style: ridge;
+	width: 130px;
 }
 table, th, td {
   border: 1px solid;
@@ -60,4 +75,20 @@ th {
 	background-color: #7289da;
 	color: white;
 	border-color: black;
+}
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 15px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+* {
+  box-sizing: border-box;
 }
