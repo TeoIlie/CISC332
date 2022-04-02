@@ -18,3 +18,5 @@ A fully functioning web-based interface for the covid vaccination database, usin
   - `sites_page` displays site vaccine availability
   - `workers_page` displays doctors, nurses at different sites
   - `status_page` displays the vaccine records of a selected patient
+  - `add_patient_page` records patient info to add a new patient record, using `add_patient.php`
+  - `add_record_page` records vaccine info to add a new vaccine record, using `add_vaccine_record.php`
