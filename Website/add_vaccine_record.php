@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Roboto:wght@100&display=swap" rel="stylesheet">
 </head>
-<h1>Adding New Vaccine Record...</h1>
+<h1>Error Adding New Vaccine Record...</h1>
 <hr>
 
 <?php
@@ -35,8 +35,20 @@
   $Vax_time = $_POST['Vax_time'];
   $query = 'INSERT INTO Recieves_vaccine values("'.$Lot_number.'","'.$Vaccine_site.'","'.$OHIP_Number.'","'.$Vax_date.'","'.$Vax_time.'")';
   $result = $connection->exec($query);
+
+  // get patients full name using OHIP to pass to status page
+  $patient_name = "Teodor Ilie";
+  echo $patient_name;
+  $query2 = 'SELECT First_name, Last_name FROM Patient WHERE OHIP_Number = "' . $OHIP_Number . '"';
+  $result2 = $connection->query($query2);
+  while ($row=$result2->fetch()) {
+      $patient_name = $row["First_name"] . " " . $row["Last_name"];
+  }
+  echo $patient_name;
   $connection = NULL;
-  header("Location:http://localhost/covid.php");
+
+  // redirect to status page, and send the patient name as you would from the homepage
+  header("Location:http://localhost/status_page.php?patient_name=".$patient_name);
 ?>
 </body>
 </html>
